@@ -7,8 +7,14 @@ multiple-line comments
  */
 public class MyMain {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
-        System.out.print("Hi!"); // use Hi text
-        System.out.println("\n");
+        int age = 28;
+        String name = "Darya";
+        boolean isEmployed = true;
+        System.out.println("Info about the employee:" + "\n" + "Name:" + " " + name + "\n" + "Age:" +  age + "\n"
+                + "Isemployed:" + " " + isEmployed);
+        int employees = 11;
+        double salaryfund = 100000.50;
+        double salaryperemploee = salaryfund/employees;
+        System.out.println("Salaryperemploee:" + " " + salaryperemploee);
     }
 }
