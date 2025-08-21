@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class OperatorsAndLoops {
     public static void main(String[] args) {
-        // call the method you want to validate
+
         operatorsTask1(7);
         System.out.println("-".repeat(25));
 
