@@ -5,6 +5,45 @@ import java.util.Scanner;
 public class OperatorsAndLoops {
     public static void main(String[] args) {
         // call the method you want to validate
+        operatorsTask1(7);
+        System.out.println("-".repeat(25));
+
+        operatorsTask2(8);
+        System.out.println("-".repeat(25));
+
+        operatorsTask3(9);
+        System.out.println("-".repeat(25));
+
+        operatorsTask4(12.4);
+        System.out.println("-".repeat(5));
+
+        operatorsTask5(2);
+        System.out.println("-".repeat(25));
+
+        loopsTask1();
+        System.out.println();
+
+        loopsTask2();
+        System.out.println();
+
+        loopsTask3();
+        System.out.println("-".repeat(20));
+
+        loopsTask4();
+
+        loopsTask5();
+        System.out.println();
+
+        loopsTask6();
+        System.out.println();
+
+        additionalTask1();
+        System.out.println();
+
+        additionalTask2();
+        System.out.println();
+
+        additionalTask3();
     }
 
     public static void operatorsTask1(int month){
@@ -49,7 +88,7 @@ public class OperatorsAndLoops {
     }
 
     public static void operatorsTask3(int number){
-        System.out.println(number % 2 == 0 ? "Even" : "Odd");
+        System.out.println(number % 2 == 0 ? "You number - Even" : "You number - Odd");
     }
 
     public static void operatorsTask4(double t){
@@ -64,13 +103,13 @@ public class OperatorsAndLoops {
 
     public static void operatorsTask5(int number){
         switch(number){
-            case 1 -> System.out.println("Red");
-            case 2 -> System.out.println("Orange");
-            case 3 -> System.out.println("Yellow");
-            case 4 -> System.out.println("Green");
-            case 5 -> System.out.println("Blue");
-            case 6 -> System.out.println("Indigo");
-            case 7 -> System.out.println("Violet");
+            case 1 -> System.out.println("Your colour - Red");
+            case 2 -> System.out.println("Your colour - Orange");
+            case 3 -> System.out.println("Your colour - Yellow");
+            case 4 -> System.out.println("Your colour - Green");
+            case 5 -> System.out.println("Your colour - Blue");
+            case 6 -> System.out.println("Your colour - Indigo");
+            case 7 -> System.out.println("Your colour - Violet");
             default -> System.out.println("Your number is incorrect");
         }
     }
@@ -78,14 +117,14 @@ public class OperatorsAndLoops {
     public static void loopsTask1(){
         for (int number = 1; number < 100; number++) {
             if (number % 2 == 1) {
-                System.out.println(number);
+                System.out.print(number + " ");
             }
         }
     }
 
     public static void loopsTask2(){
         for (int number = 5; number >= 1; number--) {
-            System.out.println(number);
+            System.out.print(number + " ");
         }
     }
 
@@ -103,20 +142,20 @@ public class OperatorsAndLoops {
     public static void loopsTask4(){
         int number = 7;
         while (number <= 98) {
-            System.out.println(number);
+            System.out.print(number + " ");
             number += 7;
         }
     }
 
     public static void loopsTask5(){
         for (int i = 0; i < 10; i++) {
-            System.out.println(i * -5);
+            System.out.print(i * -5 + " ");
         }
     }
 
     public static void loopsTask6(){
         for (int i = 10; i <= 20; i++){
-            System.out.println(i * i);
+            System.out.print((i * i) + " ");
         }
     }
 
@@ -138,12 +177,12 @@ public class OperatorsAndLoops {
         float number = scanner.nextFloat();
         System.out.print("Enter month number: ");
         int month = scanner.nextInt();
-        float commissionpermonth = (number * 7) / 100;
+        float commissionPerMonth = (number * 7) / 100;
         float sum = 0;
         for(int i = 1; i < 12; i++) {
-            sum = month * commissionpermonth;
+            sum = month * commissionPerMonth;
         }
-        System.out.println(sum);
+        System.out.println("Your sum is" + " " + sum);
     }
 
     public static void additionalTask3() {
