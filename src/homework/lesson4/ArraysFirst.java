@@ -1,15 +1,40 @@
 package homework.lesson4;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Arrays {
+public class ArraysFirst {
     public static void main(String[] args) {
-        // call the method you want to validate
+        Scanner input = new Scanner(System.in);
+
+        arraysTask0();
+        System.out.println();
+
+        arraysTask1();
+        System.out.println();
+
+        arraysTask2(2);
+        System.out.println();
+
+        arraysTask3();
+        System.out.println();
+
+        arraysTask4(1);
+        System.out.println();
+
+        arraysTask5();
+        System.out.println();
+
+        arraysTask6();
+        System.out.println();
+
+        arraysTask7();
     }
 
     public static void arraysTask0() {
         int[] numbers = new int[] {1, 2, 5, 6, 9, 100, 189};
+        System.out.println("Your array is " + Arrays.toString(numbers));
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your number: ");
         int number = input.nextInt();
@@ -29,6 +54,7 @@ public class Arrays {
 
     public static void arraysTask1(){
         int[] numbers = {1, 7, 18, 100, 283, 6, 0};
+        System.out.println("Your array is " + Arrays.toString(numbers));
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your number: ");
         int number = input.nextInt();
@@ -50,15 +76,12 @@ public class Arrays {
             }
             System.out.println("New array without " + number + ": " + java.util.Arrays.toString(result));
         }
-        input.close();
     }
 
-    public static void arraysTask2(){
-        Scanner input = new Scanner(System.in);
+    public static void arraysTask2(int input){
         System.out.println("Enter array size: ");
-        int size = input.nextInt();
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
+        int[] array = new int[input];
+        for (int i = 0; i < input; i++) {
             array[i] = (int) (Math.random() * 100);
         }
         System.out.println("Your array is: " + java.util.Arrays.toString(array));
@@ -70,7 +93,7 @@ public class Arrays {
             if (num < min) min = num;
             sum += num;
         }
-        double avg = (double) sum / size;
+        double avg = (double) sum / input;
         System.out.println("Max: " + max);
         System.out.println("Min: " + min);
         System.out.println("Avg: " + avg);
@@ -102,16 +125,13 @@ public class Arrays {
         }
     }
 
-    public static void arraysTask4(){
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter array size >5 and <=10: ");
-        int size = input.nextInt();
-        while (size <= 5 || size > 10) {
-            System.out.print("Your size is incorrect! Enter array size (>5 and <=10): ");
-            size = input.nextInt();
+    public static void arraysTask4(int input){
+        if (input <= 5 || input > 10) {
+            System.out.println("Your size is incorrect!");
+            return;
         }
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
+        int[] array = new int[input];
+        for (int i = 0; i < input; i++) {
             array[i] = (int) (Math.random() * 100);
         }
         System.out.println("Your array is: " + java.util.Arrays.toString(array));
@@ -133,7 +153,6 @@ public class Arrays {
             }
             System.out.println("Even numbers array: " + java.util.Arrays.toString(evenArray));
         }
-        input.close();
     }
 
     public static void arraysTask5(){
@@ -157,6 +176,7 @@ public class Arrays {
 
     public static void arraysTask7(){
         int[] numbers = new int[] {5, 3, 8, 4, 2};
+        System.out.println("Your array is " + Arrays.toString(numbers));
         for(int i = 0; i < numbers.length -1; i++){
             for(int j = 0; j < numbers.length - 1; j++){
                 if(numbers[j] > numbers[j + 1]){
