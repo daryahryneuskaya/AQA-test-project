@@ -30,6 +30,7 @@ public class OperatorsAndLoops {
         System.out.println("-".repeat(20));
 
         loopsTask4();
+        System.out.println();
 
         loopsTask5();
         System.out.println();
@@ -47,6 +48,8 @@ public class OperatorsAndLoops {
     }
 
     public static void operatorsTask1(int month){
+        System.out.println("1 Написать программу для вывода названия поры года по номеру" + "месяца. При решении" +
+                " используйте оператор switch-case.\n" );
         switch (month) {
             case 12:
             case 1:
@@ -74,6 +77,8 @@ public class OperatorsAndLoops {
     }
 
     public static void operatorsTask2(int month) {
+        System.out.println("2 Написать программу для вывода названия поры года по номеру месяца. При решении " +
+                " используйте оператор if-else-if.\n");
         if (month == 12 || month == 1 || month == 2) {
             System.out.println("Your season is winter");
         } else if (month == 3 || month == 4 || month == 5) {
@@ -88,10 +93,18 @@ public class OperatorsAndLoops {
     }
 
     public static void operatorsTask3(int number){
+        System.out.println("3 Напишите программу, которая будет принимать на вход число и на выход будет выводить " +
+                "сообщение четное число или нет.\n" +
+                "Для определения четности числа используйте операцию получения остатка от деления - операция " +
+                "выглядит так: '% 2').\n");
         System.out.println(number % 2 == 0 ? "You number - Even" : "You number - Odd");
     }
 
     public static void operatorsTask4(double t){
+        System.out.println("4 Для введенного числа t (температура на улице) вывести\n" +
+                "Если t>–5, то вывести «Тепло».\n" +
+                "Если –5>= t > –20, то вывести «Нормально».\n" +
+                "Если –20>= t, то вывести «Холодно».\n");
         if(t > -5){
             System.out.println("Warm");
         } else if (t<= -5 && t > -20){
@@ -102,6 +115,7 @@ public class OperatorsAndLoops {
     }
 
     public static void operatorsTask5(int number){
+        System.out.println("5 По введенному номеру определить цвет радуги (1 – красный, 4 – зеленый и т. д.).\n");
         switch(number){
             case 1 -> System.out.println("Your colour - Red");
             case 2 -> System.out.println("Your colour - Orange");
@@ -115,6 +129,8 @@ public class OperatorsAndLoops {
     }
 
     public static void loopsTask1(){
+        System.out.println("1 При помощи цикла for вывести на экран нечетные числа от 1 до 99\n" +
+                "При решении используйте операцию инкремента (++).\n");
         for (int number = 1; number < 100; number++) {
             if (number % 2 == 1) {
                 System.out.print(number + " ");
@@ -123,6 +139,8 @@ public class OperatorsAndLoops {
     }
 
     public static void loopsTask2(){
+        System.out.println("2 Необходимо вывести на экран числа от 5 до 1\n" +
+                "При решении используйте операцию декремента (--).\n");
         for (int number = 5; number >= 1; number--) {
             System.out.print(number + " ");
         }
@@ -140,6 +158,9 @@ public class OperatorsAndLoops {
     }
 
     public static void loopsTask4(){
+        System.out.println("4 Необходимо, чтоб программа выводила на экран вот такую последовательность:\n" +
+                "7 14 21 28 35 42 49 56 63 70 77 84 91 98\n" +
+                "В решении используйте цикл while.\n");
         int number = 7;
         while (number <= 98) {
             System.out.print(number + " ");
@@ -148,18 +169,22 @@ public class OperatorsAndLoops {
     }
 
     public static void loopsTask5(){
+        System.out.println("5 Вывести 10 первых чисел последовательности 0, -5,-10,-15.. \n");
         for (int i = 0; i < 10; i++) {
             System.out.print(i * -5 + " ");
         }
     }
 
     public static void loopsTask6(){
+        System.out.println("6 Составьте программу, выводящую на экран квадраты чисел от 10 до 20 включительно.\n");
         for (int i = 10; i <= 20; i++){
             System.out.print((i * i) + " ");
         }
     }
 
     public static void additionalTask1() {
+        System.out.println();
+        System.out.println("1 Выведите на экран первые 11 членов последовательности Фибоначчи.\n");
         int firstnumber = 0;
         int secondnumber = 1;
         System.out.print(firstnumber + " " + secondnumber);
@@ -172,6 +197,12 @@ public class OperatorsAndLoops {
     }
 
     public static void additionalTask2() {
+        System.out.println();
+        System.out.println("2 За каждый месяц банк начисляет к сумме вклада 7% от суммы.\n" +
+                "Напишите программу, в которую пользователь вводит сумму вклада и количество месяцев." +
+                " А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.\n" +
+                "Для вычисления суммы с учетом процентов используйте цикл for. Пусть сумма вклада будет " +
+                "представлять тип float.\n");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your sum: ");
         float number = scanner.nextFloat();
@@ -186,6 +217,7 @@ public class OperatorsAndLoops {
     }
 
     public static void additionalTask3() {
+        System.out.println("3 Напишите программу, которая выводит на консоль таблицу умножения.\n");
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
                 System.out.println(i + "х" + j + "=" + (i * j));
