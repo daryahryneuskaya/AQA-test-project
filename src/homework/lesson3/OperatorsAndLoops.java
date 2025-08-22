@@ -147,6 +147,9 @@ public class OperatorsAndLoops {
     }
 
     public static void loopsTask3(){
+        System.out.println("3 Напишите программу, где пользователь вводит любое целое положительное число. " +
+                "А программа суммирует все числа от 1 до введенного пользователем числа.\n" +
+                "Для ввода числа воспользуйтесь классом Scanner.\n");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your positive number: ");
         int number = scanner.nextInt();
