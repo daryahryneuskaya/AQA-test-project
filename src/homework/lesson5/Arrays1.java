@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Arrays1 {
     public static void main(String[] args) {
-        // call the method you want to validate
+        Arrays1Task0();
+        System.out.println(".".repeat(25));
+        Arrays1Task1();
+
     }
 
     public static void Arrays1Task0() {
