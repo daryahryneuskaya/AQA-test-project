@@ -5,9 +5,9 @@ public class CreditCard {
     double balance;
 
 
-    public CreditCard(String bankAccountNum, double initialBalance) {
-        bankAccountNumber = bankAccountNum;
-        balance = initialBalance;
+    public CreditCard(String bankAccountNumber, double balance) {
+        this.bankAccountNumber = bankAccountNumber;
+        this.balance = balance;
     }
 
     public void addMoney(double amount) {
